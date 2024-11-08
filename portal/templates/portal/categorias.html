@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+    <div class="card">
+        <div class="card-body">
+            <h4>Categorias</h4>
+            <hr>
+            <a class="btn btn-success" href="{% url 'categoriaadd' %}">Adicionar</a>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for categoria in categorias %}
+                    <tr>
+                    <td>{{ categoria.nome }} </td>
+                    <td>
+                        <a class="btn btn-warning" href="{% url 'categoriaedit' categoria_pk=categoria.id %}">Editar</a>
+                        <a class="btn btn-danger" href="{% url 'categoriadelete' categoria_pk=categoria.id %}"
+                        onclick="return confirm('Certeza?')">Excluir</a>
+                    </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

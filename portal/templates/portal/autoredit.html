@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%  block conteudo %}
+
+    <div class="card">
+        <div class="card-body">
+            <h4>Editando Autor</h4>
+            <hr>
+            <form action="{% if autor %}{% url 'autoredit' autor_pk=autor.id %}{% endif %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-success" type="submit">Salvar</button>
+                <a href="{% url 'autores' %}" class="btn btn-danger" type="submit">Cancelar</a>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
