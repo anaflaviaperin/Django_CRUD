@@ -3,13 +3,16 @@
 {% block conteudo  %}
 <div class="card">
         <div class="card-body">
-            <h4>DJANGO - CRUD</h4>
-            <thead>
-            <tr>
-                <th>Para mais detalhes acesse:</th>
-            </tr>
-            </thead>
+            <img src="https://thequickblog.com/wp-content/uploads/2020/05/django.png" width="100">
             <hr>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown" aria-expanded="false">Acesse opções do CRUD</button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><a class="dropdown-item" href="{% url 'livros' %}">Livros</a></li>
+                    <li><a class="dropdown-item" href="{% url 'autores' %}">Autores</a></li>
+                    <li><a class="dropdown-item" href="{% url 'categorias' %}">Categorias</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 {% endblock %}
