@@ -23,4 +23,5 @@ Este projeto é um sistema CRUD simples desenvolvido em Django para gerenciar in
 5. Marque a opção para criar um novo ambiente virtual (Virtualenv), marque a caixa de seleção para instalar o Django e depois clique em "Create".
 6. No arquivo settings.py do projeto você pode configurar o banco de dados, como também idioma e fuso horário. 
 
-
+## Referências
+- [Curso de Django Completo - Playlist YouTube](https://www.youtube.com/playlist?list=PL8rp8Q_tOmSP9zycKLIHK-jTcBXzrj1_W)
